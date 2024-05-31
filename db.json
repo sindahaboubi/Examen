@@ -1,0 +1,30 @@
+{
+  "departements": [
+    {
+      "matricule": 1,
+      "domaine": "d1",
+      "nb_employer": 1,
+      "max_salaire": 1000
+    },
+    {
+      "matricule": 2,
+      "domaine": "d2",
+      "nb_employer": 200,
+      "max_salaire": 2800
+    },
+    {
+      "id": "768e",
+      "matricule": 10,
+      "domaine": "domaine1",
+      "nb_employer": 100,
+      "max_salaire": "212555"
+    },
+    {
+      "id": "282d",
+      "matricule": "okk",
+      "domaine": "RH",
+      "nb_employer": 4,
+      "max_salaire": "105000"
+    }
+  ]
+}

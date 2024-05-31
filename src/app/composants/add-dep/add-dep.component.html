@@ -1,0 +1,33 @@
+<h1>Ajouter un département</h1>
+
+<form [formGroup]="depForm" (ngSubmit)="ajouterDepartement()">
+  <div class="form-group">
+    <label for="matricule">Matricule :</label>
+    <input type="text" class="form-control" id="matricule" formControlName="matricule">
+    <div class="alert alert-danger" *ngIf="depForm.get('matricule').invalid && (depForm.get('matricule').dirty || depForm.get('matricule').touched)">
+      <div *ngIf="depForm.get('matricule').hasError('minlength')">La matricule doit contenir au moins 3 caractères</div>
+      <div *ngIf="depForm.get('matricule').hasError('maxlength')">La matricule doit contenir au maximum 7 caractères</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="domaine">Domaine :</label>
+    <input type="text" class="form-control" id="domaine" formControlName="domaine">
+    <div class="alert alert-danger" *ngIf="depForm.get('domaine').invalid && (depForm.get('domaine').dirty || depForm.get('domaine').touched)">
+      <div *ngIf="depForm.get('domaine').hasError('pattern')">Le domaine doit être "informatique", "RH" ou "finance"</div>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="nb_employer">Nombre des employés :</label>
+    <input type="number" class="form-control" id="nb_employer" formControlName="nb_employer">
+  </div>
+
+  <div class="form-group">
+    <label for="max_salaire">Max salaire :</label>
+    <input type="number" class="form-control" id="max_salaire" formControlName="max_salaire">
+  </div>
+
+  <button type="submit" class="btn btn-info">Ajouter</button>
+</form>
+
